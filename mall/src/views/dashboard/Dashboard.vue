@@ -2,7 +2,7 @@
   <div id="dashboard">
     <van-tabbar v-model="active"
                 :safe-area-inset-bottom="true"
-                class="active_tab"
+                class="moveToCart"
                 active-color="#75a342">
       <van-tabbar-item v-for="(item, index) in tabbars"
                        :key="index"
@@ -20,7 +20,9 @@
     </van-tabbar>
 
     <keep-alive>
-      <router-view v-if="$route.meta.keepAlive"></router-view>
+      <transition name="router-slider" mode="out-in">
+        <router-view v-if="$route.meta.keepAlive"></router-view>
+      </transition>
     </keep-alive>
     <router-view v-if="!$route.meta.keepAlive"></router-view>
   </div>
@@ -118,4 +120,33 @@ export default {
 </script>
 
 <style lang="less" scoped>
+/*转场动画*/
+.router-slider-enter-active,
+.router-slider-leave-active {
+  transition: all 0.3s;
+}
+.router-slider-enter,
+.router-slider-leave-active {
+  opacity: 0;
+}
+@keyframes mymove {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.moveToCart {
+  animation: mymove 0.5s ease-in-out;
+}
 </style>
