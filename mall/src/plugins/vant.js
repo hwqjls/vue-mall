@@ -5,3 +5,6 @@ Vue.use(Tabbar).use(TabbarItem)
 
 import { Icon } from 'vant';
 Vue.use(Icon);
+
+import { Field } from 'vant';
+Vue.use(Field);

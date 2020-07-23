@@ -2,16 +2,22 @@
   <div class="wrapper">
     <div class="locationWrapper"
          ref="location">
-      <router-link to="/dashboard/map"
+      <router-link :to="{name:'map', path: '/dashboard/map'}"
                    tag="span"
                    class="address">
         <van-icon class="iconLoc"
                   name="location-o" />
-        <span class="searchTip">请选择位置</span>
+        <span class="locTip">请选择位置</span>
         <van-icon class="iconDown"
                   name="arrow-down" />
       </router-link>
     </div>
+
+    <van-field v-model="search"
+               class="searchWrapper"
+               clearable
+               left-icon="search"
+               placeholder="输入商品名称" />
   </div>
 </template>
 
@@ -20,7 +26,7 @@ export default {
   name: 'Header',
   data () {
     return {
-
+      search: ''
     };
   }
 }
@@ -34,9 +40,10 @@ export default {
   top: 0;
   z-index: 2;
   width: 100%;
-  height: 1.04rem;
+  height: 0.78rem;
+  line-height: 0.78rem;
   padding: 0.1rem;
-  line-height: 1.04rem;
+  background-color: salmon;
   border-top: solid 1px #eee;
   font-size: 0.32rem;
   color: #000;
@@ -45,10 +52,9 @@ export default {
 .locationWrapper {
   position: relative;
   width: 3rem;
-  height: 0.78rem;
   border-radius: 0.5rem;
   background-color: #ededed;
-  opacity: 0.6;
+  opacity: 0.8;
   box-sizing: border-box;
 }
 
@@ -58,15 +64,22 @@ export default {
   top: 0.24rem;
 }
 
-.locationWrapper .searchTip {
+.locationWrapper .locTip {
   position: absolute;
   left: 0.62rem;
-  top: -0.14rem;
+  top: 0;
 }
 
 .locationWrapper .iconDown {
   position: absolute;
   left: 2.4rem;
   top: 0.24rem;
+}
+
+.searchWrapper {
+  width: 4rem;
+  margin-left: 0.2rem;
+  background-color: #ededed;
+  border-radius: 0.5rem;
 }
 </style>

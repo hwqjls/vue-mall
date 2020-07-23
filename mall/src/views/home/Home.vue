@@ -6,6 +6,7 @@
       <div class="head">
         <Header></Header>
       </div>
+      <div class="hh"></div>
     </div>
   </div>
 </template>
@@ -32,5 +33,10 @@ export default {
 #home {
   background-color: "#f5f5f5";
   padding-bottom: 3rem;
+}
+
+.hh {
+  height: 1000px;
+  background-color: seagreen;
 }
 </style>

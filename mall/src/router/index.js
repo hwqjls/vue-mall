@@ -15,6 +15,8 @@ const Eat = () => import('../views/eat/Eat.vue');
 const Cart = () => import('../views/cart/Cart.vue');
 const Mine = () => import('../views/mine/Mine.vue');
 
+const Map = () => import('../views/home/components/map/Map.vue');
+
 Vue.use(Router)
 
 const routes = [
@@ -73,9 +75,11 @@ const routes = [
         path: 'mine',
         name: 'mine',
         component: Mine,
-        meta: {
-          keepAlive: true
-        }
+      },
+      {
+        path: 'map',
+        name: 'map',
+        component: Map,
       }]
   }
 ]

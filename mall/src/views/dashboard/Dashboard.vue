@@ -19,12 +19,13 @@
       </van-tabbar-item>
     </van-tabbar>
 
-    <keep-alive>
-      <transition name="router-slider" mode="out-in">
-        <router-view v-if="$route.meta.keepAlive"></router-view>
-      </transition>
-    </keep-alive>
-    <router-view v-if="!$route.meta.keepAlive"></router-view>
+    <transition name="router-slider"
+                mode="out-in">
+      <keep-alive v-if="$route.meta.keepAlive">
+        <router-view></router-view>
+      </keep-alive>
+      <router-view v-else></router-view>
+    </transition>
   </div>
 </template>
 
