@@ -1,16 +1,17 @@
 <template>
-  <div id="home">
-    <div>
-      <div class="head">
-        home
-      </div>
-    </div>
+  <div id="cart">
+    cart
   </div>
 </template>
 
 <script>
 export default {
+  name: 'Cart',
+  data () {
+    return {
 
+    };
+  }
 }
 </script>
 

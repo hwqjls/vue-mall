@@ -1,16 +1,17 @@
 <template>
-  <div id="home">
-    <div>
-      <div class="head">
-        home
-      </div>
-    </div>
+  <div id="eat">
+    eat
   </div>
 </template>
 
 <script>
 export default {
+  name: 'Eat',
+  data () {
+    return {
 
+    };
+  }
 }
 </script>
 
