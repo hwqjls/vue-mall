@@ -43,7 +43,6 @@ export default {
   height: 0.78rem;
   line-height: 0.78rem;
   padding: 0.1rem;
-  background-color: salmon;
   border-top: solid 1px #eee;
   font-size: 0.32rem;
   color: #000;
@@ -54,8 +53,8 @@ export default {
   width: 3rem;
   border-radius: 0.5rem;
   background-color: #ededed;
-  opacity: 0.8;
   box-sizing: border-box;
+  opacity: 0.8;
 }
 
 .locationWrapper .iconLoc {
@@ -81,5 +80,6 @@ export default {
   margin-left: 0.2rem;
   background-color: #ededed;
   border-radius: 0.5rem;
+  opacity: 0.8;
 }
 </style>

@@ -6,7 +6,7 @@ export default function ajax (url = '', params = {}, type = 'GET') {
     if (type.toUpperCase() === 'GET') {
       let paramsStr = ''
       Object.keys(params).forEach(key => {
-        paramsStr += key + '=' params[key] + '&'
+        paramsStr += key + '=' + params[key] + '&'
       })
 
       if (paramsStr) {

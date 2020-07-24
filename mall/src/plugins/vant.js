@@ -8,3 +8,6 @@ Vue.use(Icon);
 
 import { Field } from 'vant';
 Vue.use(Field);
+
+import { Toast } from 'vant';
+Vue.use(Toast);
