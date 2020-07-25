@@ -1,5 +1,6 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper"
+       :style="showBgColor?'background-color: salmon;':''">
     <div class="locationWrapper"
          ref="location">
       <router-link :to="{name:'map', path: '/dashboard/map'}"
@@ -26,8 +27,29 @@ export default {
   name: 'Header',
   data () {
     return {
-      search: ''
+      search: '',
+      showBgColor: false
     };
+  },
+  mounted () {
+    window.addEventListener('scroll', this.scrollHandle)
+  },
+  activated () {
+    window.addEventListener('scroll', this.scrollHandle)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.scrollHandle)
+  },
+  methods: {
+    scrollHandle () {
+      let top = document.documentElement.scrollTop
+      if (top > 39) {
+        // 添加搜索栏颜色
+        this.showBgColor = true;
+      } else {
+        this.showBgColor = false;
+      }
+    }
   }
 }
 </script>

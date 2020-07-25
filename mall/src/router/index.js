@@ -17,6 +17,8 @@ const Mine = () => import('../views/mine/Mine.vue');
 
 const Map = () => import('../views/home/components/map/Map.vue');
 
+const Login = () => import('../views/login/Login.vue')
+
 Vue.use(Router)
 
 const routes = [
@@ -81,6 +83,11 @@ const routes = [
         name: 'map',
         component: Map,
       }]
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login
   }
 ]
 

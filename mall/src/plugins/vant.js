@@ -11,3 +11,6 @@ Vue.use(Field);
 
 import { Toast } from 'vant';
 Vue.use(Toast);
+
+import { Grid, GridItem } from 'vant';
+Vue.use(Grid).use(GridItem);
