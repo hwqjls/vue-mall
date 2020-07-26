@@ -35,7 +35,7 @@ export default {
 
 <style lang="less" scoped>
 #tip {
-  margin-top: 0.1rem;
+  margin-top: -1rem;
   font-size: 0.2rem;
 }
 
@@ -59,6 +59,6 @@ export default {
 .adImg {
   width: 100%;
   height: 2rem;
-  margin: .1rem 0 -0.02rem; 
+  margin: 0.1rem 0 -0.02rem;
 }
 </style>

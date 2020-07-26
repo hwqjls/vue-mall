@@ -53,15 +53,16 @@ export default {
 <style lang="less" scoped>
 #sowing {
   width: 95%;
-  height: 3.48rem;
   padding: 1.1rem 0.18rem;
 }
 
 #swiper {
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
 
 #swiper img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
 }

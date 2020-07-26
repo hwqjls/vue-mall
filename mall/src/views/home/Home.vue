@@ -11,6 +11,7 @@
       </div>
       <Nav :nav_list="nav_list"></Nav>
       <VipTip></VipTip>
+      <FlashBuy :flash_sale_product_list="flash_sale_product_list"></FlashBuy>
     </div>
   </div>
 </template>
@@ -25,6 +26,7 @@ import Sowing from './components/sowing/Sowing'
 import Tip from './components/tip/Tip'
 import Nav from './components/nav/Nav'
 import VipTip from './components/myVip/VipTip'
+import FlashBuy from './components/flash/FlashBuy'
 
 export default {
   name: 'Home',
@@ -34,7 +36,8 @@ export default {
     Sowing,
     Tip,
     Nav,
-    VipTip
+    VipTip,
+    FlashBuy
   },
   data () {
     return {
@@ -42,6 +45,7 @@ export default {
       sowing_list: [], //轮播图数组
       home_ad: '',  //首页广告,
       nav_list: [], //导航列表
+      flash_sale_product_list: [], //限时抢购
     };
   },
   mounted () {
@@ -59,6 +63,7 @@ export default {
         this.sowing_list = data.list[0].icon_list
         this.home_ad = data.home_ad.image_url
         this.nav_list = data.list[2].icon_list
+        this.flash_sale_product_list = data.list[3].product_list
         this.isShowLoading = false
       }
     }

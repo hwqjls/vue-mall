@@ -5,6 +5,9 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import FastClick from 'fastclick'
+import VueLazyload from 'vue-lazyload'
+Vue.use(VueLazyload)
+
 import './icons' // icon
 
 //解决移动端点击延迟300ms问题
@@ -23,6 +26,7 @@ import '@/plugins/vant'
 import 'reset-css'
 // 全局引入rem
 import '@/config/rem'
+import '@/config/filter'
 
 window.vm = new Vue({
   router,

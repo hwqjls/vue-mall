@@ -14,3 +14,6 @@ Vue.use(Toast);
 
 import { Grid, GridItem } from 'vant';
 Vue.use(Grid).use(GridItem);
+
+import { CountDown } from 'vant';
+Vue.use(CountDown);
