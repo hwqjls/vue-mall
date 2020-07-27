@@ -69,7 +69,19 @@ export default {
   methods: {
     ...mapMutations(['ADD_TO_CART']),
     goToGoodsDetail (product) {
-
+      this.$router.push({
+        name: "goodsDetail",
+        query: {
+          id: product.id,
+          name: product.name,
+          small_image: product.small_image,
+          price: product.price,
+          spec: product.spec,
+          total_sales: product.total_sales,
+          origin_price: product.origin_price,
+          isFlash: true
+        }
+      });
     },
     addToCart (product, index) {
       this.ADD_TO_CART(product);

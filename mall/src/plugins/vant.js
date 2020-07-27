@@ -17,3 +17,6 @@ Vue.use(Grid).use(GridItem);
 
 import { CountDown } from 'vant';
 Vue.use(CountDown);
+
+import { NavBar } from 'vant';
+Vue.use(NavBar);

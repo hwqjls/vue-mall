@@ -17,7 +17,9 @@ const Mine = () => import('../views/mine/Mine.vue');
 
 const Map = () => import('../views/home/components/map/Map.vue');
 
-const Login = () => import('../views/login/Login.vue')
+const GoodsDetail = () => import('../components/goodsDetail/GoodsDetail.vue');
+
+const Login = () => import('../views/login/Login.vue');
 
 Vue.use(Router)
 
@@ -79,10 +81,16 @@ const routes = [
         component: Mine,
       },
       {
+        path: 'goodsDetail',
+        name: 'goodsDetail',
+        component: GoodsDetail,
+      },
+      {
         path: 'map',
         name: 'map',
         component: Map,
-      }]
+      }
+    ]
   },
   {
     path: '/login',
