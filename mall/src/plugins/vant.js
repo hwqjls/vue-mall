@@ -20,3 +20,9 @@ Vue.use(CountDown);
 
 import { NavBar } from 'vant';
 Vue.use(NavBar);
+
+import { Divider } from 'vant';
+Vue.use(Divider);
+
+import { GoodsAction, GoodsActionIcon, GoodsActionButton } from 'vant';
+Vue.use(GoodsAction).use(GoodsActionButton).use(GoodsActionIcon);

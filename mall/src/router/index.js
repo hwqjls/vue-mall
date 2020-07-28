@@ -81,16 +81,16 @@ const routes = [
         component: Mine,
       },
       {
-        path: 'goodsDetail',
-        name: 'goodsDetail',
-        component: GoodsDetail,
-      },
-      {
         path: 'map',
         name: 'map',
         component: Map,
       }
     ]
+  },
+  {
+    path: '/goodsDetail',
+    name: 'goodsDetail',
+    component: GoodsDetail,
   },
   {
     path: '/login',
