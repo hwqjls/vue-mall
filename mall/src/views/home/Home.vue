@@ -12,6 +12,8 @@
       <Nav :nav_list="nav_list"></Nav>
       <VipTip></VipTip>
       <FlashBuy :flash_sale_product_list="flash_sale_product_list"></FlashBuy>
+      
+      <v-top />
     </div>
   </div>
 </template>

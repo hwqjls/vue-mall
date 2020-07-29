@@ -72,6 +72,8 @@
                                  @click="onClickAddToCar" />
       </van-goods-action>
     </div>
+
+    <v-top />
   </div>
 </template>
 

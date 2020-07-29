@@ -6,6 +6,7 @@ import router from './router'
 import store from './store'
 import FastClick from 'fastclick'
 import VueLazyload from 'vue-lazyload'
+import VTop from './components/backToTop/ToTop.vue'
 Vue.use(VueLazyload)
 
 import './icons' // icon
@@ -16,6 +17,9 @@ if ('addEventListener' in document) {
     FastClick.attach(document.body)
   }, false)
 }
+
+// 注册为全局组件
+Vue.component('v-top', VTop);
 
 Vue.config.productionTip = false
 
