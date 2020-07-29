@@ -1,6 +1,6 @@
 <template>
   <div id="mine">
-    mine
+    <router-view></router-view>
   </div>
 </template>
 
@@ -16,5 +16,4 @@ export default {
 </script>
 
 <style>
-
 </style>

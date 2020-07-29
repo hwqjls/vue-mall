@@ -17,6 +17,7 @@ const Mine = () => import('../views/mine/Mine.vue');
 
 const Map = () => import('../views/home/components/map/Map.vue');
 
+const MyVip = () => import('../views/mine/children/MyVip.vue')
 const GoodsDetail = () => import('../components/goodsDetail/GoodsDetail.vue');
 
 const Login = () => import('../views/login/Login.vue');
@@ -79,6 +80,17 @@ const routes = [
         path: 'mine',
         name: 'mine',
         component: Mine,
+        children: [
+          {
+            path: 'myVip',
+            name: 'myVip',
+            component: MyVip,
+            meta: {
+              keepAlive: true,
+              // requireAuth: true,
+            }
+          }
+        ]
       },
       {
         path: 'map',
