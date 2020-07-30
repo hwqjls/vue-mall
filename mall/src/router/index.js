@@ -87,7 +87,7 @@ const routes = [
             component: MyVip,
             meta: {
               keepAlive: true,
-              // requireAuth: true,
+              requireAuth: true,
             }
           }
         ]

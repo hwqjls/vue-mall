@@ -12,7 +12,7 @@
       <Nav :nav_list="nav_list"></Nav>
       <VipTip></VipTip>
       <FlashBuy :flash_sale_product_list="flash_sale_product_list"></FlashBuy>
-      
+      <SpecialZone :specialZone="specialZone"></SpecialZone>
       <v-top />
     </div>
   </div>
@@ -29,6 +29,7 @@ import Tip from './components/tip/Tip'
 import Nav from './components/nav/Nav'
 import VipTip from './components/myVip/VipTip'
 import FlashBuy from './components/flash/FlashBuy'
+import SpecialZone from './components/special/SpecialZone'
 
 export default {
   name: 'Home',
@@ -39,7 +40,8 @@ export default {
     Tip,
     Nav,
     VipTip,
-    FlashBuy
+    FlashBuy,
+    SpecialZone
   },
   data () {
     return {
@@ -48,6 +50,7 @@ export default {
       home_ad: '',  //首页广告,
       nav_list: [], //导航列表
       flash_sale_product_list: [], //限时抢购
+      specialZone: {}, // 特色专区数据
     };
   },
   mounted () {
@@ -66,6 +69,7 @@ export default {
         this.home_ad = data.home_ad.image_url
         this.nav_list = data.list[2].icon_list
         this.flash_sale_product_list = data.list[3].product_list
+        this.specialZone = data.special_zone
         this.isShowLoading = false
       }
     }

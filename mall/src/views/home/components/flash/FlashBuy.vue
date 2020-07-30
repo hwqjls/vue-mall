@@ -54,7 +54,7 @@ export default {
     float: left;
     margin-left: 0.1rem;
     padding-left: 0.1rem;
-    border-left: 0.08rem solid #3cb963;
+    border-left: 0.08rem #3cb963 solid;
     font-size: 0.5rem;
   }
   .block {
