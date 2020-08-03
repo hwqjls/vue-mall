@@ -26,3 +26,6 @@ Vue.use(Divider);
 
 import { GoodsAction, GoodsActionIcon, GoodsActionButton } from 'vant';
 Vue.use(GoodsAction).use(GoodsActionButton).use(GoodsActionIcon);
+
+import { Tab, Tabs } from 'vant'
+Vue.use(Tab).use(Tabs)
