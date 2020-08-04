@@ -15,6 +15,8 @@
       <SpecialZone :specialZone="specialZone"></SpecialZone>
       <TabbarGoodsItem :tabbar_all_product_list="tabbar_all_product_list"
                        :flash_sale_product_list="flash_sale_product_list" />
+
+      <van-divider>我是有底线的</van-divider>
       <v-top />
     </div>
   </div>
@@ -86,10 +88,14 @@ export default {
 <style lang="less" scoped>
 #home {
   background-color: "#f5f5f5";
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   .head {
     width: 100%;
     background-image: url("http://518taole.7-orange.cn/backImage.png");
   }
+}
+.van-divider {
+  background-color: #f5f5f5;
+  margin: 0;
 }
 </style>
