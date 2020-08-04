@@ -80,7 +80,7 @@ export default {
 
 .item img {
   width: 100%;
-  height: 100%;
+  // height: 100%;
   // 等比缩小图片来适应元素的尺寸
   background-size: contain;
   background-image: url("../../../../images/placeholderImg/product-img-load.png");
